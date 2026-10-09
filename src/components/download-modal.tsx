@@ -14,6 +14,7 @@ import {
 import confetti from "canvas-confetti";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
+import { downloadApk } from "@/lib/config";
 
 interface DownloadModalProps {
   isOpen: boolean;
@@ -52,6 +53,11 @@ export function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
     setTimeout(() => {
       setDownloadStarted(false);
     }, 4000);
+  };
+
+  const handleApkDownload = () => {
+    downloadApk();
+    triggerCelebration();
   };
 
   if (!isOpen) return null;
@@ -132,7 +138,7 @@ export function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
             <Button
               variant="orange"
               size="sm"
-              onClick={triggerCelebration}
+              onClick={handleApkDownload}
               className="sm:shrink-0 w-full sm:w-auto"
             >
               <Download className="h-4 w-4 mr-1.5" />

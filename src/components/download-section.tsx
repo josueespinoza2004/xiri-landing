@@ -15,6 +15,7 @@ import {
 import confetti from "canvas-confetti";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
+import { downloadApk } from "@/lib/config";
 
 interface DownloadSectionProps {
   onOpenDownload: () => void;
@@ -24,6 +25,10 @@ export function DownloadSection({ onOpenDownload }: DownloadSectionProps) {
   const [downloadSuccess, setDownloadSuccess] = React.useState(false);
 
   const handleDownload = (platform: string) => {
+    if (platform === "apk") {
+      downloadApk();
+    }
+
     setDownloadSuccess(true);
     confetti({
       particleCount: 100,
