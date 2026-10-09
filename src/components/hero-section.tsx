@@ -135,8 +135,8 @@ export function HeroSection() {
 
           </div>
 
-          {/* Right Column: Phone Mockup with Real App Details */}
-          <div className="lg:col-span-5 flex justify-center relative">
+          {/* Right Column: Phone Mockup with Real App Details (oculto en móvil) */}
+          <div className="hidden lg:col-span-5 lg:flex justify-center relative">
             
             {/* Floating Badge Left */}
             <div className="hidden sm:flex absolute -left-6 top-16 z-20 items-center gap-3 rounded-2xl bg-white p-3.5 shadow-xl border border-[#053225]/10 animate-float">

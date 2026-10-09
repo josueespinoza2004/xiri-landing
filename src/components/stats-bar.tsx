@@ -1,4 +1,4 @@
-import { Map, UtensilsCrossed, Compass, Award } from "lucide-react";
+import { Map, UtensilsCrossed, Compass } from "lucide-react";
 
 interface StatsBarProps {
   departmentsCount: number;
@@ -36,20 +36,12 @@ export function StatsBar({
       color: "text-[#BDBF09]",
       bgColor: "bg-[#BDBF09]/15",
     },
-    {
-      icon: Award,
-      value: "100%",
-      label: "Pasaporte de Experiencias",
-      sublabel: "Insignias y retos gastronómicos",
-      color: "text-[#053225]",
-      bgColor: "bg-[#053225]/10",
-    },
   ];
 
   return (
     <section className="relative z-20 -mt-6 sm:-mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="rounded-3xl bg-white border border-[#053225]/10 p-6 sm:p-8 shadow-xl shadow-[#053225]/5">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
             return (
