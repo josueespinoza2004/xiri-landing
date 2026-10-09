@@ -69,7 +69,7 @@ export function Navbar() {
             variant="orange"
             size="default"
             onClick={openDownload}
-            className="group shadow-md hover:shadow-lg"
+            className="group shadow-md hover:shadow-lg hidden sm:inline-flex"
           >
             <Download className="h-4 w-4 mr-2 group-hover:-translate-y-0.5 transition-transform" />
             <span>Descargar App</span>

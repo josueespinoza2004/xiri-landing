@@ -66,7 +66,7 @@ export function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
       />
 
       {/* Modal Dialog */}
-      <div className="relative z-10 w-full max-w-xl rounded-3xl bg-[#F5EFED] p-6 sm:p-8 shadow-2xl border border-white/60 text-[#053225] animate-in zoom-in-95 duration-200 overflow-hidden">
+      <div className="relative z-10 w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#F5EFED] p-6 sm:p-8 shadow-2xl border border-white/60 text-[#053225] animate-in zoom-in-95 duration-200">
         {/* Glow accent */}
         <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[#D96C06]/20 blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-[#2292A4]/20 blur-3xl pointer-events-none" />

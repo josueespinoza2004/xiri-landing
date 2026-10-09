@@ -33,7 +33,7 @@ export function HeroSection() {
           {/* Left Column: Headline and Call to Actions */}
           <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
             {/* Main Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[62px] font-black tracking-tight text-[#053225] leading-[1.08]">
+            <h1 className="text-[34px] sm:text-5xl md:text-6xl lg:text-[62px] font-black tracking-tight text-[#053225] leading-[1.1]">
               Explorá el auténtico{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D96C06] via-[#BDBF09] to-[#2292A4]">
                 sabor nicaragüense

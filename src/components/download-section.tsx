@@ -42,7 +42,7 @@ export function DownloadSection() {
     <section id="descargar" className="py-20 lg:py-28 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="relative rounded-[40px] bg-gradient-to-br from-[#053225] via-[#084333] to-[#03231a] p-8 sm:p-12 lg:p-20 text-white shadow-2xl overflow-hidden border border-white/10">
+        <div className="relative rounded-3xl sm:rounded-[40px] bg-gradient-to-br from-[#053225] via-[#084333] to-[#03231a] p-6 sm:p-12 lg:p-20 text-white shadow-2xl overflow-hidden border border-white/10">
           
           {/* Ambient Lighting Orbs */}
           <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-[#D96C06]/20 blur-3xl pointer-events-none" />
