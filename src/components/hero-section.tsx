@@ -4,12 +4,9 @@ import * as React from "react";
 import Image from "next/image";
 import {
   Download,
-  Smartphone,
   MapPin,
   Star,
   Award,
-  ChevronRight,
-  Sparkles,
   Compass,
   Utensils,
   CheckCircle,
@@ -79,7 +76,7 @@ export function HeroSection({ onOpenDownload }: HeroSectionProps) {
               </a>
             </div>
 
-            {/* Store & Direct Download Badges */}
+            {/* Direct Download Badge */}
             <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs text-[#053225]/70">
               <div
                 onClick={onOpenDownload}
@@ -94,25 +91,11 @@ export function HeroSection({ onOpenDownload }: HeroSectionProps) {
                 </div>
               </div>
 
-              <div
-                onClick={onOpenDownload}
-                className="cursor-pointer flex items-center gap-2 rounded-xl bg-white/90 border border-[#053225]/10 px-3 py-2 hover:border-[#2292A4]/50 transition-all shadow-xs"
-              >
-                <Smartphone className="h-4 w-4 text-[#2292A4]" />
+              <div className="flex items-center gap-2 rounded-xl bg-white/90 border border-[#053225]/10 px-3 py-2 shadow-xs">
+                <CheckCircle className="h-4 w-4 text-[#2292A4]" />
                 <div className="flex flex-col text-left">
-                  <span className="text-[10px] text-[#053225]/60 font-semibold leading-none">Disponible en</span>
-                  <span className="text-xs font-bold text-[#053225] leading-tight">Google Play</span>
-                </div>
-              </div>
-
-              <div
-                onClick={onOpenDownload}
-                className="cursor-pointer flex items-center gap-2 rounded-xl bg-white/90 border border-[#053225]/10 px-3 py-2 hover:border-[#053225]/40 transition-all shadow-xs"
-              >
-                <Sparkles className="h-4 w-4 text-[#BDBF09]" />
-                <div className="flex flex-col text-left">
-                  <span className="text-[10px] text-[#053225]/60 font-semibold leading-none">Próximamente en</span>
-                  <span className="text-xs font-bold text-[#053225] leading-tight">Apple App Store</span>
+                  <span className="text-[10px] text-[#053225]/60 font-semibold leading-none">Compatible con</span>
+                  <span className="text-xs font-bold text-[#053225] leading-tight">Android 8.0+</span>
                 </div>
               </div>
             </div>

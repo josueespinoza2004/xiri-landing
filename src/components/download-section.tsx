@@ -1,21 +1,19 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import {
   Download,
-  Smartphone,
   QrCode,
   ShieldCheck,
   Zap,
   CheckCircle2,
   Sparkles,
-  ExternalLink,
 } from "lucide-react";
 import confetti from "canvas-confetti";
+import { QRCodeSVG } from "qrcode.react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { downloadApk } from "@/lib/config";
+import { downloadApk, APK_DOWNLOAD_URL } from "@/lib/config";
 
 interface DownloadSectionProps {
   onOpenDownload: () => void;
@@ -95,26 +93,15 @@ export function DownloadSection({ onOpenDownload }: DownloadSectionProps) {
                   Descargar APK Directo
                 </Button>
 
-                {/* Google Play Button */}
-                <Button
-                  variant="teal"
-                  size="xl"
-                  onClick={() => handleDownload("playstore")}
-                  className="w-full sm:w-auto shadow-xl shadow-[#2292A4]/30 hover:shadow-[#2292A4]/50 text-base"
-                >
-                  <Smartphone className="h-5 w-5 mr-2" />
-                  Google Play Store
-                </Button>
-
-                {/* Apple Store Button */}
+                {/* More options Button (opens modal) */}
                 <Button
                   variant="glass"
                   size="xl"
-                  onClick={() => handleDownload("appstore")}
+                  onClick={onOpenDownload}
                   className="w-full sm:w-auto text-[#053225] text-base"
                 >
-                  <Sparkles className="h-5 w-5 mr-2 text-[#D96C06]" />
-                  App Store (iOS)
+                  <QrCode className="h-5 w-5 mr-2 text-[#2292A4]" />
+                  Ver código QR
                 </Button>
               </div>
 
@@ -126,7 +113,7 @@ export function DownloadSection({ onOpenDownload }: DownloadSectionProps) {
                 </div>
                 <div className="flex items-center gap-2 justify-center lg:justify-start">
                   <Zap className="h-4 w-4 text-[#2292A4] shrink-0" />
-                  <span>Descarga ligera (~38 MB)</span>
+                  <span>Instalación rápida (~82 MB)</span>
                 </div>
                 <div className="flex items-center gap-2 justify-center lg:justify-start">
                   <CheckCircle2 className="h-4 w-4 text-[#D96C06] shrink-0" />
@@ -145,21 +132,22 @@ export function DownloadSection({ onOpenDownload }: DownloadSectionProps) {
                   <span className="text-xs font-bold text-[#053225]">Escaneá para instalar</span>
                 </div>
 
-                {/* QR Visual Canvas */}
+                {/* QR Real Canvas (apunta al APK) */}
                 <div className="relative mx-auto my-2 p-4 bg-[#F5EFED] rounded-2xl border border-[#053225]/10 flex flex-col items-center justify-center">
-                  <div className="relative h-44 w-44 flex items-center justify-center bg-white p-2 rounded-xl shadow-inner">
-                    <QrCode className="h-36 w-36 text-[#053225]" />
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <div className="h-10 w-10 rounded-xl bg-[#053225] p-1.5 shadow-md flex items-center justify-center">
-                        <Image
-                          src="/images/logo.png"
-                          alt="Xiri Icon"
-                          width={28}
-                          height={28}
-                          className="object-contain"
-                        />
-                      </div>
-                    </div>
+                  <div className="relative flex items-center justify-center bg-white p-3 rounded-xl shadow-inner">
+                    <QRCodeSVG
+                      value={APK_DOWNLOAD_URL}
+                      size={168}
+                      level="M"
+                      bgColor="#ffffff"
+                      fgColor="#053225"
+                      imageSettings={{
+                        src: "/images/logo.png",
+                        height: 36,
+                        width: 36,
+                        excavate: true,
+                      }}
+                    />
                   </div>
                 </div>
 
@@ -173,7 +161,7 @@ export function DownloadSection({ onOpenDownload }: DownloadSectionProps) {
                 <div className="mt-4 pt-4 border-t border-[#053225]/10 flex items-center justify-around text-[11px] font-bold text-[#053225]/80">
                   <span className="text-[#2292A4]">Android 8.0+</span>
                   <span>•</span>
-                  <span className="text-[#D96C06]">iOS 14.0+</span>
+                  <span className="text-[#D96C06]">Descarga directa</span>
                   <span>•</span>
                   <span className="text-[#053225]">Sin registro previo</span>
                 </div>
