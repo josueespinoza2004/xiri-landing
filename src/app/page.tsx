@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
-import { StatsBar } from "@/components/stats-bar";
 import { FeaturesGrid } from "@/components/features-grid";
 import { DishesShowcase } from "@/components/dishes-showcase";
 import { RoutesSection } from "@/components/routes-section";
@@ -12,7 +11,7 @@ import { DownloadProvider } from "@/components/download-provider";
 import { getLandingData } from "@/lib/api";
 
 export default async function LandingPage() {
-  const { foods, departments, routes } = await getLandingData();
+  const { foods, routes } = await getLandingData();
 
   return (
     <DownloadProvider>
@@ -23,11 +22,6 @@ export default async function LandingPage() {
         {/* Main Content Sections */}
         <main className="flex-1">
           <HeroSection />
-          <StatsBar
-            departmentsCount={departments.length}
-            foodsCount={foods.length}
-            routesCount={routes.length}
-          />
           <div id="que-es">
             <FeaturesGrid />
           </div>
