@@ -8,6 +8,8 @@ interface DishesShowcaseProps {
 }
 
 export function DishesShowcase({ foods }: DishesShowcaseProps) {
+  // Solo mostramos una muestra; el catálogo completo está en la app.
+  const sample = foods.slice(0, 4);
   return (
     <section id="platillos" className="py-20 lg:py-28 bg-[#F5EFED] relative overflow-hidden">
       {/* Background accents */}
@@ -31,9 +33,9 @@ export function DishesShowcase({ foods }: DishesShowcaseProps) {
         </div>
 
         {/* Dishes Grid */}
-        {foods.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {foods.map((dish) => (
+        {sample.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {sample.map((dish) => (
               <div
                 key={dish.id}
                 className="group rounded-3xl bg-white border border-[#053225]/10 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#D96C06]/30 transition-all duration-300 flex flex-col"
