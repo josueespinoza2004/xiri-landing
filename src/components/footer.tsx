@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { Download, Heart, ArrowUp, MapPin } from "lucide-react";
+import { Download, Heart, ArrowUp } from "lucide-react";
 import { Button } from "./ui/button";
 import { useDownload } from "./download-provider";
 
@@ -32,14 +32,9 @@ export function Footer() {
               />
             </div>
 
-            <p className="text-sm text-[#053225]/70 max-w-sm leading-relaxed mb-6">
+            <p className="text-sm text-[#053225]/70 max-w-sm leading-relaxed">
               La plataforma comunitaria creada para revalorizar nuestra comida tradicional, conectar con comiderías locales y redescubrir los sabores de cada departamento nicaragüense.
             </p>
-
-            <div className="flex items-center gap-2 text-xs text-[#053225]/80 bg-white px-3.5 py-2 rounded-xl border border-[#053225]/10">
-              <MapPin className="h-4 w-4 text-[#D96C06]" />
-              <span>Nicaragua, Centroamérica</span>
-            </div>
           </div>
 
           {/* Quick Links */}
