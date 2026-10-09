@@ -1,11 +1,4 @@
-import {
-  Store,
-  CheckCircle2,
-  Users,
-  TrendingUp,
-  ShieldCheck,
-  Sparkles,
-} from "lucide-react";
+import { Store, CheckCircle2, Users, TrendingUp, ShieldCheck } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 export function BusinessSection() {
@@ -18,10 +11,10 @@ export function BusinessSection() {
           <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-[#D96C06]/10 blur-3xl pointer-events-none" />
           <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-[#2292A4]/10 blur-3xl pointer-events-none" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
-            {/* Left Column: Proposition */}
-            <div className="lg:col-span-7">
+          <div className="relative z-10">
+
+            {/* Proposition */}
+            <div>
               <Badge variant="orange" className="mb-4 uppercase tracking-wider text-xs">
                 Para Dueños de Comiderías & Fritangas
               </Badge>
@@ -86,54 +79,6 @@ export function BusinessSection() {
             </div>
 
             {/* Right Column: Interactive Card */}
-            <div className="lg:col-span-5">
-              <div className="rounded-3xl bg-[#053225] text-white p-7 shadow-2xl relative">
-                <div className="flex items-center justify-between pb-4 border-b border-white/10">
-                  <div className="flex items-center gap-2">
-                    <span className="h-3 w-3 rounded-full bg-[#BDBF09]" />
-                    <span className="text-xs font-bold text-white uppercase tracking-wider">
-                      Perfil de Comercio Verificado
-                    </span>
-                  </div>
-                  <Badge variant="olive" className="text-[10px] bg-[#BDBF09]/20 text-[#d6d81e]">
-                    Activo
-                  </Badge>
-                </div>
-
-                <div className="mt-5 space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-2xl bg-[#D96C06] text-white flex items-center justify-center font-black text-lg">
-                      FT
-                    </div>
-                    <div>
-                      <h4 className="font-black text-base text-white">Fritanga Doña Tania</h4>
-                      <p className="text-xs text-white/70">Managua • Barrio Campo Bruce</p>
-                    </div>
-                  </div>
-
-                  <div className="rounded-2xl bg-white/10 p-3.5 space-y-2 text-xs">
-                    <div className="flex justify-between text-white/80">
-                      <span>Especialidad:</span>
-                      <strong className="text-white">Carne Asada con Tajadas</strong>
-                    </div>
-                    <div className="flex justify-between text-white/80">
-                      <span>Horario de atención:</span>
-                      <strong className="text-white">5:00 PM - 11:30 PM</strong>
-                    </div>
-                    <div className="flex justify-between text-white/80">
-                      <span>Calificación promedio:</span>
-                      <strong className="text-[#BDBF09]">★ 4.9 (340 opiniones)</strong>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-2 text-[11px] text-[#2292A4] bg-white/5 p-2.5 rounded-xl border border-white/10">
-                    <Sparkles className="h-4 w-4 shrink-0" />
-                    <span>Incluido en la "Ruta de la Fritanga Nocturna"</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
 
