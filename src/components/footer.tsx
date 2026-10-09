@@ -23,22 +23,14 @@ export function Footer() {
           
           {/* Brand Info */}
           <div className="lg:col-span-5 flex flex-col items-start">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="h-12 w-12 rounded-2xl bg-[#053225] p-2 flex items-center justify-center border border-white/10 shadow-lg">
-                <Image
-                  src="/images/logo.png"
-                  alt="Logo de Xiri"
-                  width={38}
-                  height={38}
-                  className="object-contain"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-black tracking-tight text-white">Xiri</span>
-                <span className="text-xs text-[#BDBF09] font-semibold -mt-1">
-                  Gastronomía de Nicaragua
-                </span>
-              </div>
+            <div className="flex items-center mb-4">
+              <Image
+                src="/images/logo.png"
+                alt="Logo de Xiri"
+                width={96}
+                height={96}
+                className="h-[72px] w-[72px] sm:h-[88px] sm:w-[88px] object-contain"
+              />
             </div>
 
             <p className="text-sm text-white/70 max-w-sm leading-relaxed mb-6">
