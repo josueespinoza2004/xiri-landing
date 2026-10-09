@@ -6,9 +6,7 @@
  * Solo se consumen endpoints públicos de solo lectura del backend de Xiri.
  */
 
-const API_BASE =
-  process.env.XIRI_API_URL ??
-  "https://xiri-backend-production.onrender.com/api";
+const API_BASE = process.env.XIRI_API_URL!;
 
 /** Revalidación: los datos cambian poco, se refrescan cada hora. */
 const REVALIDATE_SECONDS = 3600;

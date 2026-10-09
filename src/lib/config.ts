@@ -5,14 +5,13 @@
  * URL siempre apunta a la última versión publicada sin necesidad de editar
  * el código al sacar un build nuevo (solo se actualiza el asset del release).
  */
-export const APK_DOWNLOAD_URL =
-  "https://github.com/josueespinoza2004/xiri-frontend/releases/download/latest/Xiri.apk";
+export const APK_DOWNLOAD_URL = process.env.NEXT_PUBLIC_APK_DOWNLOAD_URL!;
 
 /** Nombre con el que se guardará el archivo al descargar. */
-export const APK_FILE_NAME = "Xiri.apk";
+export const APK_FILE_NAME = process.env.NEXT_PUBLIC_APK_FILE_NAME!;
 
 /** Versión pública actual, mostrada en la UI de descarga. */
-export const APP_VERSION = "1.0.0";
+export const APP_VERSION = process.env.NEXT_PUBLIC_APP_VERSION!;
 
 /**
  * Dispara la descarga del APK creando un enlace temporal. Mantener la lógica
