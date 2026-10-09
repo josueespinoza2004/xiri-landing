@@ -43,9 +43,9 @@ export function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Logo de Xiri"
-            width={64}
-            height={64}
-            className="h-14 w-14 sm:h-16 sm:w-16 object-contain group-hover:scale-105 transition-transform"
+            width={96}
+            height={96}
+            className="h-[72px] w-[72px] sm:h-[88px] sm:w-[88px] object-contain group-hover:scale-105 transition-transform"
             priority
           />
         </Link>

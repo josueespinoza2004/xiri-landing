@@ -120,7 +120,7 @@ export function HeroSection() {
               <div className="flex items-center gap-2 pl-4 border-l border-[#053225]/15">
                 <CheckCircle className="h-5 w-5 text-[#053225]" />
                 <span className="text-xs font-semibold text-[#053225]">
-                  Comiderías y Fritangas 100% Locales
+                  Negocios y Platillos 100% Locales
                 </span>
               </div>
             </div>
