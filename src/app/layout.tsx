@@ -26,10 +26,6 @@ export const metadata: Metadata = {
     "App gastronómica",
   ],
   authors: [{ name: "Xiri Team" }],
-  icons: {
-    icon: "/images/logo.png",
-    apple: "/images/icon.png",
-  },
   openGraph: {
     title: "Xiri - La Guía Gastronómica de Nicaragua",
     description:
