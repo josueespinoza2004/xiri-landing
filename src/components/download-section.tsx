@@ -14,12 +14,10 @@ import { QRCodeSVG } from "qrcode.react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { downloadApk, APK_DOWNLOAD_URL } from "@/lib/config";
+import { useDownload } from "./download-provider";
 
-interface DownloadSectionProps {
-  onOpenDownload: () => void;
-}
-
-export function DownloadSection({ onOpenDownload }: DownloadSectionProps) {
+export function DownloadSection() {
+  const { openDownload } = useDownload();
   const [downloadSuccess, setDownloadSuccess] = React.useState(false);
 
   const handleDownload = (platform: string) => {
@@ -97,7 +95,7 @@ export function DownloadSection({ onOpenDownload }: DownloadSectionProps) {
                 <Button
                   variant="glass"
                   size="xl"
-                  onClick={onOpenDownload}
+                  onClick={openDownload}
                   className="w-full sm:w-auto text-[#053225] text-base"
                 >
                   <QrCode className="h-5 w-5 mr-2 text-[#2292A4]" />

@@ -1,18 +1,4 @@
-"use client";
-
-import * as React from "react";
-import Image from "next/image";
-import {
-  Compass,
-  BookmarkCheck,
-  Store,
-  MapPin,
-  Sparkles,
-  ShieldCheck,
-  Heart,
-  TrendingUp,
-} from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "./ui/card";
+import { Compass, BookmarkCheck, MapPin, ShieldCheck } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 export function FeaturesGrid() {

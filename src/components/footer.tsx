@@ -3,14 +3,12 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Download, Heart, ArrowUp, MapPin, Mail, Sparkles } from "lucide-react";
+import { Download, Heart, ArrowUp, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
+import { useDownload } from "./download-provider";
 
-interface FooterProps {
-  onOpenDownload: () => void;
-}
-
-export function Footer({ onOpenDownload }: FooterProps) {
+export function Footer() {
+  const { openDownload } = useDownload();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -123,7 +121,7 @@ export function Footer({ onOpenDownload }: FooterProps) {
               <Button
                 variant="orange"
                 size="sm"
-                onClick={onOpenDownload}
+                onClick={openDownload}
                 className="w-full text-xs font-bold"
               >
                 <Download className="h-3.5 w-3.5 mr-1.5" />

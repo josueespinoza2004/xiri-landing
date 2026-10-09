@@ -3,15 +3,12 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Download, Menu, X, UtensilsCrossed, Sparkles } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
+import { useDownload } from "./download-provider";
 
-interface NavbarProps {
-  onOpenDownload: () => void;
-}
-
-export function Navbar({ onOpenDownload }: NavbarProps) {
+export function Navbar() {
+  const { openDownload } = useDownload();
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
@@ -86,7 +83,7 @@ export function Navbar({ onOpenDownload }: NavbarProps) {
           <Button
             variant="orange"
             size="default"
-            onClick={onOpenDownload}
+            onClick={openDownload}
             className="group shadow-md hover:shadow-lg"
           >
             <Download className="h-4 w-4 mr-2 group-hover:-translate-y-0.5 transition-transform" />
@@ -125,7 +122,7 @@ export function Navbar({ onOpenDownload }: NavbarProps) {
                 size="lg"
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  onOpenDownload();
+                  openDownload();
                 }}
                 className="w-full"
               >

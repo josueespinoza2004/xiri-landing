@@ -13,12 +13,10 @@ import {
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
+import { useDownload } from "./download-provider";
 
-interface HeroSectionProps {
-  onOpenDownload: () => void;
-}
-
-export function HeroSection({ onOpenDownload }: HeroSectionProps) {
+export function HeroSection() {
+  const { openDownload } = useDownload();
   return (
     <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24 lg:pt-40 lg:pb-32">
       {/* Background radial gradients matching brand colors */}
@@ -61,7 +59,7 @@ export function HeroSection({ onOpenDownload }: HeroSectionProps) {
               <Button
                 variant="orange"
                 size="xl"
-                onClick={onOpenDownload}
+                onClick={openDownload}
                 className="w-full sm:w-auto shadow-xl shadow-[#D96C06]/25 hover:shadow-2xl hover:shadow-[#D96C06]/40 text-base"
               >
                 <Download className="h-5 w-5 mr-2" />
@@ -79,7 +77,7 @@ export function HeroSection({ onOpenDownload }: HeroSectionProps) {
             {/* Direct Download Badge */}
             <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs text-[#053225]/70">
               <div
-                onClick={onOpenDownload}
+                onClick={openDownload}
                 className="cursor-pointer flex items-center gap-2 rounded-xl bg-white/90 border border-[#053225]/10 px-3 py-2 hover:border-[#D96C06]/50 transition-all shadow-xs"
               >
                 <div className="h-5 w-5 rounded-md bg-[#053225] text-white flex items-center justify-center text-[10px] font-bold">

@@ -1,13 +1,20 @@
-"use client";
+import { Map, UtensilsCrossed, Compass, Award } from "lucide-react";
 
-import * as React from "react";
-import { Map, UtensilsCrossed, Store, Award } from "lucide-react";
+interface StatsBarProps {
+  departmentsCount: number;
+  foodsCount: number;
+  routesCount: number;
+}
 
-export function StatsBar() {
+export function StatsBar({
+  departmentsCount,
+  foodsCount,
+  routesCount,
+}: StatsBarProps) {
   const stats = [
     {
       icon: Map,
-      value: "17",
+      value: departmentsCount > 0 ? String(departmentsCount) : "—",
       label: "Departamentos y Regiones",
       sublabel: "Desde el Pacífico hasta el Caribe",
       color: "text-[#2292A4]",
@@ -15,17 +22,17 @@ export function StatsBar() {
     },
     {
       icon: UtensilsCrossed,
-      value: "150+",
+      value: foodsCount > 0 ? String(foodsCount) : "—",
       label: "Comidas Típicas Documentadas",
       sublabel: "Historia, origen y preparación",
       color: "text-[#D96C06]",
       bgColor: "bg-[#D96C06]/10",
     },
     {
-      icon: Store,
-      value: "250+",
-      label: "Fritangas y Locales Verificados",
-      sublabel: "Comercio tradicional directo",
+      icon: Compass,
+      value: routesCount > 0 ? String(routesCount) : "—",
+      label: "Rutas Gastronómicas",
+      sublabel: "Itinerarios culinarios por el país",
       color: "text-[#BDBF09]",
       bgColor: "bg-[#BDBF09]/15",
     },

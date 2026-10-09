@@ -1,23 +1,14 @@
-"use client";
-
-import * as React from "react";
 import {
   Store,
   CheckCircle2,
   Users,
   TrendingUp,
   ShieldCheck,
-  ArrowRight,
   Sparkles,
 } from "lucide-react";
 import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
 
-interface BusinessSectionProps {
-  onOpenDownload: () => void;
-}
-
-export function BusinessSection({ onOpenDownload }: BusinessSectionProps) {
+export function BusinessSection() {
   return (
     <section id="negocios" className="py-20 lg:py-28 bg-[#F5EFED] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,18 +74,13 @@ export function BusinessSection({ onOpenDownload }: BusinessSectionProps) {
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
-                <Button
-                  variant="default"
-                  size="lg"
-                  onClick={onOpenDownload}
-                  className="w-full sm:w-auto"
-                >
-                  <Store className="h-5 w-5 mr-2" />
-                  Solicitar Verificación en la App
-                </Button>
-                <span className="text-xs text-[#053225]/60 font-medium text-center sm:text-left">
-                  Registro rápido desde la sección de perfil de la app móvil.
+              <div className="mt-8 flex items-center gap-3 rounded-2xl bg-[#F5EFED] border border-[#053225]/10 p-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#053225] text-white">
+                  <Store className="h-5 w-5" />
+                </div>
+                <span className="text-xs sm:text-sm text-[#053225]/75 font-medium">
+                  La verificación de tu negocio se solicita desde la sección de perfil
+                  dentro de la app móvil, de forma rápida y gratuita.
                 </span>
               </div>
             </div>
