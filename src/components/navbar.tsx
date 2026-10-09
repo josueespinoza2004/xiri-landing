@@ -39,30 +39,15 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative h-11 w-11 sm:h-12 sm:w-12 rounded-2xl bg-[#053225] p-2 flex items-center justify-center shadow-md shadow-[#053225]/20 group-hover:scale-105 transition-transform">
-            <Image
-              src="/images/logo.png"
-              alt="Logo de Xiri"
-              width={40}
-              height={40}
-              className="object-contain"
-              priority
-            />
-          </div>
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-black tracking-tight text-[#053225]">
-                Xiri
-              </span>
-              <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded-full bg-[#BDBF09]/30 text-[#6f7004]">
-                NICARAGUA
-              </span>
-            </div>
-            <span className="text-[11px] font-medium text-[#053225]/70 -mt-1 hidden sm:block">
-              Gastronomía en tu bolsillo
-            </span>
-          </div>
+        <Link href="/" className="flex items-center group" aria-label="Xiri">
+          <Image
+            src="/images/logo.png"
+            alt="Logo de Xiri"
+            width={64}
+            height={64}
+            className="h-14 w-14 sm:h-16 sm:w-16 object-contain group-hover:scale-105 transition-transform"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation Links */}

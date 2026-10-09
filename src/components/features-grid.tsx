@@ -139,7 +139,7 @@ export function FeaturesGrid() {
                     Cobertura Nacional
                   </Badge>
                   <h3 className="text-xl sm:text-2xl font-bold text-white">
-                    17 Departamentos y Regiones Autónomas
+                    15 Departamentos y 2 Regiones Autónomas
                   </h3>
                 </div>
               </div>

@@ -32,14 +32,6 @@ export function HeroSection() {
           
           {/* Left Column: Headline and Call to Actions */}
           <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
-            {/* Top pill badge */}
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-[#053225]/15 bg-white/80 backdrop-blur-md px-4 py-1.5 shadow-xs mb-6">
-              <span className="flex h-2 w-2 rounded-full bg-[#D96C06] animate-ping" />
-              <span className="text-xs font-bold uppercase tracking-wider text-[#053225]">
-                🇳🇮 La Primera App Gastronómica de Nicaragua
-              </span>
-            </div>
-
             {/* Main Title */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[62px] font-black tracking-tight text-[#053225] leading-[1.08]">
               Explorá el auténtico{" "}
@@ -51,7 +43,7 @@ export function HeroSection() {
 
             {/* Description */}
             <p className="mt-6 text-base sm:text-lg md:text-xl text-[#053225]/75 max-w-2xl font-normal leading-relaxed">
-              Descubrí comidas típicas de los 17 departamentos, recorré rutas culinarias con negocios locales verificados y coleccioná tus experiencias culinarias como un verdadero explorador del sabor.
+              Descubrí comidas típicas de los 15 departamentos y 2 regiones autónomas, recorré rutas culinarias con negocios locales verificados y coleccioná tus experiencias culinarias como un verdadero explorador del sabor.
             </p>
 
             {/* CTA Group */}

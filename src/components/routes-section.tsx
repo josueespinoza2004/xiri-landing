@@ -9,6 +9,8 @@ interface RoutesSectionProps {
 const ACCENTS = ["#D96C06", "#2292A4", "#BDBF09", "#F5EFED"];
 
 export function RoutesSection({ routes }: RoutesSectionProps) {
+  // Solo mostramos una muestra; el resto está en la app.
+  const sample = routes.slice(0, 4);
   return (
     <section id="rutas" className="py-20 lg:py-28 bg-[#053225] text-white relative overflow-hidden">
       {/* Decorative patterns */}
@@ -33,9 +35,9 @@ export function RoutesSection({ routes }: RoutesSectionProps) {
         </div>
 
         {/* Routes Grid */}
-        {routes.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {routes.map((route, idx) => {
+        {sample.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {sample.map((route, idx) => {
               const accent = ACCENTS[idx % ACCENTS.length];
               return (
                 <div
